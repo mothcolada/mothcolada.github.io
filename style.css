@@ -1,34 +1,68 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
-   HTML content. To learn how to do something, just try searching Google for questions like
-   "how to change link color." */
+@font-face {
+  font-family: "nds";
+  src: url("assets/nds.ttf");
+}
 
 body {
-  background-color: #111144;
-  color: #ffffcc;
-  font-family: Verdana, sans-serif;
-  margin: 50px;
+  background-color: #26172b;
+  color: #fff6db;
+  font-family: "nds", sans-serif;
+  margin: 48px;
+  font-size: 24px;
 }
-a {
-  color: #33ddff;
+
+p {
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
-img {
-  margin-right: 16px;
+
+a {font-weight: normal;}
+a:link {color: #67ebff;}
+a:visited {color: #ff8091;}
+
+img { 
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Universal support since 2021   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
 }
+
+svg {
+  image-rendering: crisp-edges; /* Or 'crisp-edges' for sharp scaling */
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 12px;
+  margin-top: 0px;
+}
+
 .column {
   float: left;
   width: 50%;
 }
+
 .creation {
-  background-color: #223366;
-  color: #ffffcc;
+  background-color: #473360;
+  background-clip: padding-box;
+  border: 16px solid transparent;
+  border-image: url(assets/border.png) 16 stretch;
+  color: #fff6db;
   height: 128px;
-  padding: 16px;
-  margin: 8px;
-}
-.creation-small {
-  background-color: #223366;
-  color: #ffffcc;
-  height: 128px;
-  padding: 16px;
+  padding: 0px;
   margin: 16px;
 }
