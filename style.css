@@ -55,9 +55,15 @@ h3 {
   background-color: #473360;
   background-clip: padding-box;
   border: 16px solid transparent;
+  overflow: hidden;
   border-image: url(assets/border.png) 16 stretch;
   color: #fff6db;
   padding: 0px;
   margin-top: 16px;
   margin-bottom: 16px;
+}
+
+.icon {
+  margin-right: 12px;
+  float: left;
 }
