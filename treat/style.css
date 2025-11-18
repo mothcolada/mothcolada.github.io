@@ -11,7 +11,7 @@
 
 .dialogue {
   margin-left: 4px;
-  color: #ffffff;
+  color: white;
   font-family: "Nunito", sans-serif;
   font-size: 13pt;
   text-shadow: -1px 1px 1px #00000090, -1px -1px 1px #00000090, 1px -1px 1px #00000090, 1px 1px 1px #00000090;
@@ -60,4 +60,25 @@
 
 .event {
   font-family: monospace;
+}
+
+.command {
+  font-family: monospace;
+  font-size: x-small;
+  margin: 2px;
+  white-space: pre-wrap; /* don't collapse multiple spaces in code */
+}
+
+.dark-bg {
+  background-color: black;
+  color: white;
+}
+
+.dark-box {
+  background-color: #282828c0;
+}
+
+.sidebar {
+  position: fixed;
+  width: 150px;
 }
