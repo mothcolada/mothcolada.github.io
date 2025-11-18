@@ -51,11 +51,6 @@ h3 {
   margin-top: 0px;
 }
 
-.column {
-  float: left;
-  width: 50%;
-}
-
 .creation {
   background-color: #473360;
   background-clip: padding-box;
@@ -64,5 +59,6 @@ h3 {
   color: #fff6db;
   height: 128px;
   padding: 0px;
-  margin: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
