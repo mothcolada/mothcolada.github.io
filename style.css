@@ -1,9 +1,34 @@
+:root {
+  --moth-pink: #ff8080;
+  --colada-yellow: #ffc79a;
+  --dark: #26172b;
+  --light: #fff6db;
+}
+
 body {
-  background-color: #26172b;
-  color: #fff6db;
+  background-color: var(--dark);
+  color: var(--light);
   font-family: sans-serif;
-  margin: 48px;
-  font-size: 24px;
+  padding: 50px;
+  margin: auto;
+}
+
+#content {
+  display: flex;
+  gap: 20px;
+}
+
+#sidebar {
+  background-color: var(--colada-yellow);
+  color: var(--dark);
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+}
+
+footer {
+  text-align: center;
+  font-size: small;
 }
 
 p {
@@ -11,9 +36,11 @@ p {
   margin-bottom: 12px;
 }
 
-a {font-weight: normal;}
-a:link {color: #67ebff;}
-a:visited {color: #ff8091;}
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--moth-pink);
+}
 
 img { 
   image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
@@ -42,20 +69,25 @@ h2 {
 h3 {
   font-size: 24px;
   font-weight: normal;
-  margin: 12px;
+  margin-bottom: 12px;
   margin-top: 0px;
 }
 
 .creation {
   background-color: #473360;
   background-clip: padding-box;
-  border: 4px solid #ff8091;
+  border: 4px solid #ff8080;
   border-radius: 12px;
   overflow: hidden;
   color: #fff6db;
-  padding: 8px;
+  padding: 12px;
   margin-top: 16px;
   margin-bottom: 16px;
+  transition: 0.2s;
+}
+
+.creation:hover {
+  border-color: var(--colada-yellow);
 }
 
 .creation::before {
@@ -72,4 +104,7 @@ h3 {
 .icon {
   margin-right: 12px;
   float: left;
+  border-radius: 4px;
 }
+
+
