@@ -3,6 +3,8 @@
   --colada-yellow: #ffc79a;
   --dark: #26172b;
   --light: #fff6db;
+  --almost-dark: #473360;
+  --dark-pink: #b93455;
 }
 
 body {
@@ -10,25 +12,50 @@ body {
   color: var(--light);
   font-family: sans-serif;
   padding: 50px;
+  display: flex;
+}
+
+#container {
   margin: auto;
 }
 
 #content {
   display: flex;
   gap: 20px;
+  min-width: 600px;
+  max-width: 1200px;
 }
 
 #sidebar {
   background-color: var(--colada-yellow);
   color: var(--dark);
   padding: 20px;
-  border-radius: 10px;
-  width: 200px;
+  border-radius: 15px;
+  width: 250px;
+}
+
+#socials {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 15px;
+  background-color: var(--almost-dark);
+  padding: 20px;
+  min-width: 400px;
 }
 
 footer {
   text-align: center;
   font-size: small;
+  margin-top: 20px;
 }
 
 p {
@@ -38,8 +65,15 @@ p {
 
 a {
   font-weight: bold;
-  text-decoration: none;
   color: var(--moth-pink);
+}
+
+#sidebar a {
+  color: var(--dark-pink);
+}
+
+ul {
+  padding-left: 20px;
 }
 
 img { 
@@ -57,48 +91,39 @@ svg {
 }
 
 h1 {
-  font-size: 48px;
-  font-weight: normal;
+  margin-bottom: 10px;
 }
 
 h2 {
-  font-size: 36px;
-  font-weight: normal;
-}
-
-h3 {
-  font-size: 24px;
-  font-weight: normal;
   margin-bottom: 12px;
-  margin-top: 0px;
+  margin-top: 12px;
 }
 
 .creation {
-  background-color: #473360;
+  background-color: var(--dark);
   background-clip: padding-box;
-  border: 4px solid #ff8080;
-  border-radius: 12px;
+  border: 4px solid var(--dark);
+  border-radius: 16px;
   overflow: hidden;
   color: #fff6db;
   padding: 12px;
-  margin-top: 16px;
-  margin-bottom: 16px;
-  transition: 0.2s;
-}
-
-.creation:hover {
-  border-color: var(--colada-yellow);
+  position: relative;
 }
 
 .creation::before {
-  background-color: #473360;
-  background-clip: padding-box;
-  border: 4px solid blue;
-  overflow: hidden;
-  color: #fff6db;
-  padding: 8px;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  border: 4px solid var(--moth-pink);
+  border-radius: 12px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  content: "";
+  transition: 0.2s;
+}
+
+.creation:hover::before {
+  border-color: var(--colada-yellow);
 }
 
 .icon {
