@@ -76,7 +76,7 @@ ul {
   padding-left: 20px;
 }
 
-img { 
+:root { 
   image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
   image-rendering: -moz-crisp-edges;          /* Firefox                        */
   image-rendering: -o-crisp-edges;            /* Opera                          */
@@ -94,9 +94,15 @@ h1 {
   margin-bottom: 10px;
 }
 
-h2 {
-  margin-bottom: 12px;
-  margin-top: 12px;
+h2, h3 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+h3 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: large;
 }
 
 .creation {
@@ -120,6 +126,11 @@ h2 {
   position: absolute;
   content: "";
   transition: 0.2s;
+}
+
+.creation * {  /* fix unclickable links and unselectable text */
+  z-index: 1;
+  position: relative;
 }
 
 .creation:hover::before {
